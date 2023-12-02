@@ -3,10 +3,11 @@ pragma solidity ^0.8.13;
 
 import {Script, console2} from "forge-std/Script.sol";
 
-contract CounterScript is Script {
-    function setUp() public {}
+contract Script01 is Script {
 
     function run() public {
-        vm.broadcast();
+        // vm.broadcast();
+        string memory a = vm.readFile("./input/01");
+        console2.logBytes(bytes(a));
     }
 }
